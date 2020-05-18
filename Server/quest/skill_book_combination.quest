@@ -1,0 +1,12 @@
+quest skill_book_combination begin
+	state start begin
+		when 20095.chat."How can I trade books? " begin
+			say("Welcome![ENTER]Are you interested in trading books with me?[ENTER]Excellent! I'm always on the lookout for skill[ENTER]books and manuals. If you bring me 10, I'll give[ENTER]you a skill book for your class. Doesn't that[ENTER]sound like a fair deal? Oh yes, I almost forgot[ENTER]to mention that I charge a fee of 1,000,000 Yang[ENTER]for trading. ")
+		end
+
+		when 20095.chat."Trade books " begin
+			setskin(NOWINDOW)
+			cmdchat("OpenSkillbookCombinationDialog")
+		end
+	end
+end
