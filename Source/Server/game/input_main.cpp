@@ -51,8 +51,9 @@ bool CInputMain::SkillBookCombination(LPCHARACTER ch, TItemPos(&CombItemGrid)[SK
 		LPITEM pItem = *it;
 		if (pItem)
 		{
-			pItem->RemoveFromCharacter();
-			M2_DESTROY_ITEM(pItem);
+			pItem->SetCount(pItem->GetCount() - 1);
+			// pItem->RemoveFromCharacter();
+			// M2_DESTROY_ITEM(pItem);
 		}
 	}
 
