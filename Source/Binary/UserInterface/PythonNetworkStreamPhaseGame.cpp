@@ -11,6 +11,6 @@ bool CPythonNetworkStream::SendSkillBookCombinationPacket(TItemPos* pPos, BYTE b
 	if (!Send(sizeof(SkillBookCombCGPacket), &SkillBookCombCGPacket))
 		return false;
 
-	return SendSequece();
+	return SendSequence();
 }
 #endif
